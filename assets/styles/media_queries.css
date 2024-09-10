@@ -5,10 +5,20 @@
 }
 @media screen and (max-width: 991px) {
   #about .container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.5fr 1fr !important;
   }
   .product {
     width: calc((100% / 2) - var(--card-gap)) !important;
+  }
+}
+@media screen and (max-width: 861px) {
+  #about .container {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media screen and (max-width: 791px) {
+  #about .container {
+    grid-template-columns: 1fr !important;
   }
 }
 @media screen and (max-width: 588px) {
