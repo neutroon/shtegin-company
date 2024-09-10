@@ -1,0 +1,14 @@
+.floating-whatsApp {
+  animation: top-down 2s infinite;
+}
+@keyframes top-down {
+  0% {
+    transform: translateY(-1rem);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+}

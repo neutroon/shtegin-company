@@ -1,0 +1,208 @@
+@import url(./animations.css);
+@import url(./media_queries.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+section {
+  padding: 4rem 0;
+}
+img {
+  width: 100%;
+  display: block;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+:root {
+  --main-color: red;
+  --nav-height: 6rem;
+  --fix-overflowY-issue-height: calc(var(--nav-height) + 2rem);
+  --card-gap: 2rem;
+}
+/* 
+  * Global Styles end here
+*/
+/* --------------------------------------------- */
+.fix-overflowY-issue {
+  height: var(--fix-overflowY-issue-height);
+  overflow: hidden;
+}
+/* --------------------------------------------- */
+nav {
+  height: var(--nav-height);
+  background-color: var(--main-color);
+  color: white;
+  padding: 1rem;
+  position: relative;
+  font-size: 1.5rem;
+  /* overflow-x: hidden; */
+  /* overflow-y: visible; */
+}
+nav .container {
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+.nav-links {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  gap: 1rem;
+}
+.nav-shape {
+  position: absolute;
+  right: calc(var(--nav-height) * -2);
+  top: -10rem;
+  width: calc(var(--nav-height) * 3);
+  height: calc(var(--nav-height) * 3);
+  border-radius: 50%;
+  border: 1.2rem solid white;
+}
+/* 
+  * Navbar Styles end here
+*/
+#hero {
+  margin-top: -2rem; /* to fix the overflow issue */
+  /* ------ */
+  height: calc(100vh - var(--nav-height));
+  background: url(../images/hero-bg.webp) no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.hero-content {
+  margin-bottom: 4rem;
+}
+.hero-content p {
+  text-transform: uppercase;
+  color: white;
+}
+.hero-content p span {
+  position: relative;
+}
+.hero-content p > span::after {
+  content: "";
+  position: absolute;
+  top: 0.3rem;
+  left: 0;
+  bottom: -0.5rem;
+  width: 100%;
+  background-color: var(--main-color);
+}
+.hero-content p span > span {
+  position: relative;
+  z-index: 1;
+}
+
+/* 
+  * Home Section Styles end here
+*/
+
+#about .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+.about-content p {
+  margin-bottom: 1rem;
+  color: #333;
+  line-height: 1.8;
+}
+.sec-ending {
+  width: 6rem;
+  height: 1rem;
+  background-color: var(--main-color);
+  margin-top: 1rem;
+}
+.about-img {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.about-img img {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.about-img-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(196, 0, 0, 0.7);
+}
+/* 
+  * About Section Styles end here
+*/
+#products h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+.products-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--card-gap);
+}
+.product {
+  width: calc((100% / 4) - var(--card-gap));
+  background-color: var(--main-color);
+  padding: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+}
+.product img {
+  margin-bottom: 1rem;
+}
+/* 
+  * Products Section Styles end here
+*/
+
+/* floating icons */
+.floating-whatsApp {
+  width: 4rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 1.5rem;
+  z-index: 1000;
+}
