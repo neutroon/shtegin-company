@@ -1,5 +1,5 @@
 @import url(./animations.css);
-/* @import url(./media_queries.css); */
+@import url(./media_queries.css);
 
 * {
   margin: 0;
@@ -114,7 +114,8 @@ nav .container {
   margin-top: -2rem; /* to fix the overflow issue */
   /* ------ */
   height: calc(100vh - var(--nav-height));
-  background: url(../images/hero-bg.png) no-repeat center/cover;
+  background: url(../images/hero-bg.png) no-repeat 40% / cover;
+
   display: flex;
   justify-content: center;
   align-items: end;
@@ -178,8 +179,11 @@ nav .container {
 }
 .service-img {
   max-width: 6rem;
-
   min-width: 2rem;
+  /* width: 20%; */
+}
+.service-content {
+  width: 90%;
 }
 
 /* 

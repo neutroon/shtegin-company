@@ -11,7 +11,7 @@
     width: calc((100% / 2) - var(--card-gap)) !important;
   }
   .client {
-    width: calc((100% / 4) - 2rem);
+    width: calc((100% / 4) - 2rem) !important;
   }
 }
 @media screen and (max-width: 861px) {
@@ -19,7 +19,7 @@
     grid-template-columns: 1fr 1fr !important;
   }
   .client {
-    width: calc((100% / 3) - 2rem);
+    width: calc((100% / 3) - 2rem) !important;
   }
 }
 @media screen and (max-width: 791px) {
@@ -29,7 +29,7 @@
 }
 @media screen and (max-width: 588px) {
   :root {
-    --nav-height: 9.8rem;
+    --nav-height: 9.8rem !important;
   }
   nav .container {
     flex-direction: row-reverse;
@@ -48,6 +48,6 @@
     width: 100%;
   }
   .client {
-    width: calc((100% / 2) - 2rem);
+    width: calc((100% / 2) - 2rem) !important;
   }
 }
