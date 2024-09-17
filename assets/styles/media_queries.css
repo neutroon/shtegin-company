@@ -10,10 +10,16 @@
   .product {
     width: calc((100% / 2) - var(--card-gap)) !important;
   }
+  .client {
+    width: calc((100% / 4) - 2rem);
+  }
 }
 @media screen and (max-width: 861px) {
   #about .container {
     grid-template-columns: 1fr 1fr !important;
+  }
+  .client {
+    width: calc((100% / 3) - 2rem);
   }
 }
 @media screen and (max-width: 791px) {
@@ -22,7 +28,26 @@
   }
 }
 @media screen and (max-width: 588px) {
+  :root {
+    --nav-height: 9.8rem;
+  }
+  nav .container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .nav-logo img {
+    height: 100%;
+  }
+  .nav-shape {
+    display: none;
+  }
   .product {
     width: 100% !important;
+  }
+  .nav-links li {
+    width: 100%;
+  }
+  .client {
+    width: calc((100% / 2) - 2rem);
   }
 }
